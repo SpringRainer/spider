@@ -137,13 +137,16 @@ if __name__ == '__main__':
     #     if (item == 'bltyy'):
     #         durableDataToMysql(dictList=dictList[item],tablename='pricelist',price_type='price')
 
-    figure = Figures()
-    result = queryLegend()
+    # figure = Figures()
+    # result = queryLegend()
+    # print(result)
+    # for item in result:
+    #     print(item['legend'])
+    #     pricelist = queryDataResult(tablename='pricelist',legend=item['legend'])
+    #     print(pricelist)
+    #     figure.drawDist(pricelist,legend=item['legend'])
+    spider = SpiderData()
+    result = spider.getStockCertificate()
     print(result)
-    for item in result:
-        print(item['legend'])
-        pricelist = queryDataResult(tablename='pricelist',legend=item['legend'])
-        print(pricelist)
-        figure.drawDist(pricelist,legend=item['legend'])
 
 

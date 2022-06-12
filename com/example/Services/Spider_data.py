@@ -16,3 +16,7 @@ class SpiderData:
         json_01 = requests.post("http://price.mofcom.gov.cn/datamofcom/front/index/echart/data/query")
         # print(json_01.text)
         return json_01.text
+
+    def getStockCertificate(self):
+        json_01 = requests.get("http://quotes.money.163.com/trade/lsjysj_zhishu_000001.html?year=2021&season=3")
+        return json_01.text
